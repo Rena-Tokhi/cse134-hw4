@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The CSE Cheese Society</title>
+  <link rel="stylesheet" href="styles/tokens.css">
+  <link rel="stylesheet" href="styles/global.css">
+  <link rel="stylesheet" href="styles/site.css">
+</head>
+<body>
+  <header>
+    <img src="images/logo.svg" alt="" class="logo">
+    <a href="index.html" class="site-name">The CSE Cheese Society</a>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html" aria-current="page">Home</a></li>
+      <li><a href="guide/index.html">Guide</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="join.html">Join</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1>Welcome to The CSE Cheese Society</h1>
+    <p>We are a community of students, staff and cheese enthusiasts who gather to taste, learn about, and discuss cheeses from around the world. Whether you are an experienced cheese connoisseur or simply cheese-curious, you are welcome here.</p>
+    <p>Explore our <a href="guide/index.html">cheese guide</a>, learn more about the <a href="about.html">Society</a>, or <a href="join.html">join us</a> at an upcoming tasting.</p>
+
+    <button id="cheese-fact-trigger" class="btn" commandfor="cheese-fact" command="toggle-popover">
+      Cheese Fact
+    </button>
+    <div id="cheese-fact" popover>
+      <p>Cheese is one of the world&rsquo;s oldest prepared foods, with evidence of cheesemaking dating back thousands of years.</p>
+    </div>
+  </main>
+
+  <aside>
+    <h2>Cheese of the Month</h2>
+    <p>This month, we are celebrating blue cheese&mdash;bold, distinctive, and full of character.</p>
+    <p><a href="guide/blue.html">Read about blue cheeses &rarr;</a></p>
+  </aside>
+
+  <footer>
+    <p>&copy; 2026 The CSE Cheese Society. Cheese responsibly.</p>
+  </footer>
+</body>
+</html>
