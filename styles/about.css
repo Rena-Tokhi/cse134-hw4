@@ -1,0 +1,36 @@
+/* about.html — layout map
+   Based on demo 02 (float). The history figure floats to the left,
+   same as the demo, and text flows around it. */
+
+body > main {
+  max-width: var(--measure);
+  margin-inline: auto;
+  padding: var(--space-3);
+}
+
+.history figure {
+  float: left;
+  width: 10rem;
+  margin: 0 var(--space-2) var(--space-1) 0;
+  padding: var(--space-2);
+  border: var(--border);
+  background: var(--panel);
+}
+
+.board {
+  clear: both;
+  padding-block-start: var(--space-3);
+  border-block-start: var(--rule);
+
+  details {
+    margin-block-end: var(--space-2);
+    padding: var(--space-2);
+    border: var(--border);
+    background: var(--panel);
+  }
+}
+
+.meetings {
+  clear: both;
+  margin-block-start: var(--space-3);
+}

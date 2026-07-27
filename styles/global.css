@@ -1,6 +1,6 @@
-/* Reset, type, and color only — every layout rule lives in each demo's own
-   <style>. Both layers below lose to any unlayered rule, so demo styles
-   always override these without specificity fights. */
+/* Reset, type, and color only, every layout rule lives in site.css
+   or a per-page layout file, both left unlayered so they
+   always beat these two layers without any specificity fight. */
 
 @layer reset, base;
 
@@ -34,6 +34,12 @@
   h1 { font-size: var(--text-xl); }
   h2 { font-size: var(--text-l); }
 
+  h3 {
+    margin-block: 0 var(--space-2);
+    font-size: var(--text-m);
+    font-weight: 700;
+  }
+
   p {
     margin-block: 0 var(--space-2);
   }
@@ -55,5 +61,10 @@
   code {
     font-family: ui-monospace, "SF Mono", Menlo, monospace;
     font-size: 0.9em;
+  }
+
+  details > summary {
+    cursor: pointer;
+    font-weight: 700;
   }
 }
