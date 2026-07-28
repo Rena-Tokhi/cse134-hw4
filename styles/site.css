@@ -1,0 +1,87 @@
+/* SITE CHROME
+   The header, nav, and footer that look identical on every page, plus
+   the site-wide view-transition opt-in and the shared .btn look used
+   by the home popover trigger and the join dialog. */
+
+header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  border-block-end: var(--border);
+  background: var(--panel);
+
+  .logo {
+    width: 2.5rem;
+    height: 2.5rem;
+    flex-shrink: 0;
+  }
+
+  .site-name {
+    font-size: var(--text-l);
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--ink);
+  }
+}
+
+nav {
+  padding: var(--space-1) var(--space-3);
+  border-block-end: var(--border);
+  background: var(--paper);
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+    font-weight: 700;
+    padding-block: var(--space-1);
+
+    &:hover {
+      color: var(--accent);
+    }
+
+    &[aria-current="page"] {
+      border-block-end: var(--rule);
+    }
+  }
+}
+
+footer {
+  padding: var(--space-2) var(--space-3);
+  border-block-start: var(--border);
+  background: var(--panel);
+  text-align: center;
+  font-size: var(--text-s);
+}
+
+.btn {
+  display: inline-block;
+  border: var(--border);
+  border-block-end: var(--rule);
+  background: var(--paper);
+  color: var(--ink);
+  padding: var(--space-1) var(--space-2);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+
+  &:hover {
+    color: var(--accent);
+  }
+}
+
+/* Cross-document view transitions, guarded behind a user's motion
+   preference so nothing moves for anyone who asked for less. */
+@media (prefers-reduced-motion: no-preference) {
+  @view-transition {
+    navigation: auto;
+  }
+}
