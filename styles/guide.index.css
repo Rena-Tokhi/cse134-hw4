@@ -1,0 +1,32 @@
+/* guide/index.html — layout map
+   Built from: 01 flow. No flex, no grid on this page. */
+
+body > main {
+  max-width: var(--measure);
+  margin-inline: auto;
+  padding: var(--space-3);
+}
+
+.family-card {
+  padding: var(--space-2) var(--space-3);
+  margin-block-end: var(--space-3);
+  border-inline-start: var(--rule);
+  background: var(--panel);
+
+  img {
+    width: 8rem;
+    margin-block-end: var(--space-1);
+  }
+
+  h3 a {
+    text-decoration: none;
+  }
+}
+
+/* View-transition names, matched against the hero image with the
+   same name in guide-family.css so each cheese morphs from this
+   listing into its own detail page. */
+#thumb-fresh { view-transition-name: cheese-fresh; }
+#thumb-soft  { view-transition-name: cheese-soft; }
+#thumb-blue  { view-transition-name: cheese-blue; }
+#thumb-hard  { view-transition-name: cheese-hard; }

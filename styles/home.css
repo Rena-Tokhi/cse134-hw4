@@ -1,0 +1,79 @@
+/* index.html — layout map
+   Built from: 09 grid holy grail. header and footer span all three
+   columns; nav and aside are the fixed side columns; main takes the
+   rest. */
+
+body {
+  --nav-width: 10rem;
+  --aside-width: 14rem;
+
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "nav    main   aside"
+    "footer footer footer";
+  grid-template-columns: var(--nav-width) 1fr var(--aside-width);
+  grid-template-rows: auto 1fr auto;
+  min-height: 100svh;
+  max-width: 75rem;
+  margin-inline: auto;
+
+  > header {
+    grid-area: header;
+  }
+
+  > nav {
+    grid-area: nav;
+  }
+
+  > main {
+    grid-area: main;
+    padding: var(--space-3);
+  }
+
+  > aside {
+    grid-area: aside;
+    padding: var(--space-2);
+    border-inline-start: var(--border);
+    background: var(--panel);
+  }
+
+  > footer {
+    grid-area: footer;
+  }
+
+  @media (max-width: 40rem) {
+    grid-template-areas:
+      "header"
+      "nav"
+      "main"
+      "aside"
+      "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr auto auto;
+
+    > aside {
+      border-inline: none;
+      border-block-start: var(--border);
+    }
+  }
+}
+
+/* Invoker-driven popover for the "Cheese Fact" callout */
+#cheese-fact-trigger {
+  margin-block-start: var(--space-2);
+}
+
+#cheese-fact[popover] {
+  max-width: 24rem;
+  margin: auto;
+  padding: var(--space-3);
+  border: var(--border);
+  border-block-start: var(--rule);
+  background: var(--panel);
+  color: var(--ink);
+}
+
+#cheese-fact[popover]::backdrop {
+  background: rgb(43 29 15 / 40%);
+}
